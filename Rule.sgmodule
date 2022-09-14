@@ -1,5 +1,5 @@
 #!name=🌐 Rule Settings Enhanced
-#!desc=1.增补跳过代理部分段内容 2.增补返回真实IP段内容
+#!desc=552 Rule
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
 [Rule]
 AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
