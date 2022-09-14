@@ -1,0 +1,29 @@
+[Rule]
+AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
+IP-CIDR,119.29.29.98/32,REJECT
+IP-CIDR,203.107.1.0/24,REJECT
+RULE-SET, https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list,DIRECT
+#RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list,REJECT
+# Advert 广告屏蔽
+DOMAIN-SET,https://anti-ad.net/surge2.txt,REJECT
+# Global 全球加速
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, PROXY
+# China  国内直连
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/China/China.list, DIRECT
+# > LAN
+DOMAIN,localhost,DIRECT
+DOMAIN-SUFFIX,local,DIRECT
+IP-CIDR,0.0.0.0/8,DIRECT,no-resolve
+IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+IP-CIDR,192.0.2.0/24,DIRECT,no-resolve
+IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+IP-CIDR,198.18.0.0/15,DIRECT,no-resolve
+IP-CIDR,198.51.100.0/24,DIRECT,no-resolve
+IP-CIDR,203.0.113.0/24,DIRECT,no-resolve
+IP-CIDR,224.0.0.0/4,DIRECT,no-resolve
+IP-CIDR,240.0.0.0/4,DIRECT,no-resolve
+#GEOIP,CN,DIRECT
+FINAL,PROXY
