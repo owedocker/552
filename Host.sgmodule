@@ -1,3 +1,6 @@
+#!name=🌐 Host Settings Enhanced
+#!desc=1.增补跳过代理部分段内容 2.增补返回真实IP段内容
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
 [Host]
 *.126.com = server:119.29.29.29
 *.126.net = server:119.29.29.29
